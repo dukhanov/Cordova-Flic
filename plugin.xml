@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	id="cordova-plugin-flic"
-	version="1.0.3">
+	version="1.0.4">
 	<name>Flic</name>
 	<description>A Cordova plugin providing access to the Flic SDK</description>
 	<license>Apache 2.0</license>
@@ -12,8 +12,6 @@
 
 	<engines>
         <engine name="cordova" version=">=7.1.0"/>
-        <engine name="cordova-android" version=">=6.3.0"/>
-        <engine name="cordova-ios" version=">=4.4.0"/>
     </engines>
 	
 	<js-module src="www/Flic.js" name="Flic">
@@ -23,8 +21,8 @@
 	<!-- android -->
 	<platform name="android">
 		<!-- Add plugin dependencies -->
-		<framework src="src/android/cordovaFlic.gradle" custom="true" type="gradleReference" />
-        <resource-file src="libs/fliclib-release.aar" target="libs/fliclib-release.aar" />
+		<framework src="src/android/build.gradle" custom="true" type="gradleReference" />
+		<resource-file src="src/android/libs/fliclib.aar" target="src/android/libs/fliclib.aar" />
 		<config-file target="res/xml/config.xml" parent="/*">
 			<!-- The feature's name attribute should match what you specify as the JavaScript exec call's service parameter.
 				The value attribute should match the name of the plugin's Java class.

@@ -1,7 +1,17 @@
-repositories {
-	maven { url "https://jitpack.io" }
+repositories{    
+	jcenter()
+	flatDir{
+		dirs 'src/android/libs'
+	}
 }
 
 dependencies {
-	compile 'com.github.50ButtonsEach:fliclib-android:ec1cdc3fbe'
+	compile(name:'fliclib', ext:'aar')
+}
+
+android {
+	packagingOptions {
+		exclude 'META-INF/NOTICE'
+		exclude 'META-INF/LICENSE'
+	}
 }
