@@ -2,13 +2,19 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	id="cordova-plugin-flic"
-	version="1.0.2">
+	version="1.0.3">
 	<name>Flic</name>
 	<description>A Cordova plugin providing access to the Flic SDK</description>
 	<license>Apache 2.0</license>
 	<keywords>cordova,flic,smart,button,sdk</keywords>
 	<repo></repo>
 	<issue></issue>
+
+	<engines>
+        <engine name="cordova" version=">=7.1.0"/>
+        <engine name="cordova-android" version=">=6.3.0"/>
+        <engine name="cordova-ios" version=">=4.4.0"/>
+    </engines>
 	
 	<js-module src="www/Flic.js" name="Flic">
 		<clobbers target="Flic" />
@@ -66,7 +72,5 @@
 			
 		<source-file src="src/ios/Flic.m" />
 		<header-file src="src/ios/Flic.h" />
-		
-		<hook type="after_platform_add" src="hook/addEmbedded.js" />
 	</platform> 
 </plugin>

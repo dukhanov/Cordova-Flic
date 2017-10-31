@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-flic",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Cordova plugin providing access to the Flic SDK",
   "cordova": {
     "id": "cordova-plugin-flic",
