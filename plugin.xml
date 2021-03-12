@@ -22,7 +22,7 @@
 	<platform name="android">
 		<!-- Add plugin dependencies -->
 		<framework src="src/android/build.gradle" custom="true" type="gradleReference" />
-		<resource-file src="src/android/libs/fliclib.aar" target="../../libs" />
+		<resource-file src="src/android/libs/fliclib.aar" target="../../libs/fliclib.aar" />
 		<config-file target="res/xml/config.xml" parent="/*">
 			<!-- The feature's name attribute should match what you specify as the JavaScript exec call's service parameter.
 				The value attribute should match the name of the plugin's Java class.
